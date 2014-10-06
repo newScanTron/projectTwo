@@ -1,0 +1,6 @@
+<tag key="value"> test and stuff is what
+<inside>
+this is things   and      suff
+what it up.     dauwwwg</inside>
+
+</tag>
