@@ -39,15 +39,19 @@ for string_one in xml_file_list:
         tag_list.append(string_one)
         print(spacer(len(tag_list)), string_one)
     elif re.match('<[/\w\s]+?>', string_one):
-
         string_one.splitlines()
         print(spacer(len(tag_list)), string_one)
         tag_list.pop()
     elif re.match('[\w\s]+?', string_one):
-        for each in string_one.split():
-            words_list.append(each)
+        string_one = re.split('[\s]+?', string_one)
+        for each in string_one:
             string_string += each
-        #print(spacer(len(tag_list)), words_list)
+        #print(string_one)
+        # for each in string_one:
+        #     words_list.append(each)
+        #     string_string += each
+        #print(spacer(len(tag_list)), string_string)
+        print(spacer(len(tag_list)), string_one)
         print(spacer(len(tag_list)), string_string)
 
 
