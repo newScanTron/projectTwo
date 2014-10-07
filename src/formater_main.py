@@ -38,10 +38,15 @@ for string_one in xml_file_list:
     if re.match('<[\w\s]+?>|<[\w\s]+?[=\s\*\?]"[\w\s]+?">', string_one):
         tag_list.append(string_one)
         print(spacer(len(tag_list)), string_one)
+
     elif re.match('<[/\w\s]+?>', string_one):
         string_one.splitlines()
         print(spacer(len(tag_list)), string_one)
-        tag_list.pop()
+        tag = tag_list.pop()
+        #split here on the not words stuff
+
+        if not re.match('<[/\w\s]+?>', tag):
+            print(" you suck so hard")
     elif re.match('[\w\s]+?', string_one):
         string_one = re.split('[\s]+?', string_one)
         for each in string_one:
@@ -51,7 +56,9 @@ for string_one in xml_file_list:
         #     words_list.append(each)
         #     string_string += each
         #print(spacer(len(tag_list)), string_string)
-        print(spacer(len(tag_list)), string_one)
-        print(spacer(len(tag_list)), string_string)
+        #print(spacer(len(tag_list)), string_one)
+        if len(string_string) > 0:
+            print(spacer(len(tag_list)), string_string)
+            string_string = ''
 
 

@@ -5,5 +5,5 @@ what it up.     dauwwwg</inside>
 you bra <tag> i havet you<other> ahhhh<hi>
 this is funish
 </hi>
-</other> <i hate you="yeah"> what the haps is happen </i hate you> </tag>
+</other> <i hate="yeah"> what the haps is happen </i hate> </tag>
 </tag>
