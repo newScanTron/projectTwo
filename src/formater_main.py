@@ -51,12 +51,7 @@ for string_one in xml_file_list:
         string_one = re.split('[\s]+?', string_one)
         for each in string_one:
             string_string += each
-        #print(string_one)
-        # for each in string_one:
-        #     words_list.append(each)
-        #     string_string += each
-        #print(spacer(len(tag_list)), string_string)
-        #print(spacer(len(tag_list)), string_one)
+
         if len(string_string) > 0:
             print(spacer(len(tag_list)), string_string)
             string_string = ''
